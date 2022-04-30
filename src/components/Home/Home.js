@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Home.css';
 import img from '../../image/warhouse.jpg'
 import Item from '../Item/Item';
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -48,7 +49,7 @@ const Home = () => {
 
                         
                         {
-                            items.map(item=><Item key={item._id}  item={item}></Item>)
+                            items.slice(0,6).map(item=><Item key={item._id}  item={item}></Item>)
 
                         }
 
@@ -57,6 +58,8 @@ const Home = () => {
 
 
                 </div>
+
+                <Link to='/manageInventory'><button className=' mx-auto d-block btn btn-lg btn-primary mt-5'>Manage Inventory</button></Link>
 
 
 

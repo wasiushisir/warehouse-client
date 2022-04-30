@@ -5,6 +5,7 @@ import About from './components/About/About';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Inventory from './components/Inventory/Inventory';
+import ManageInventory from './components/ManageInventory/ManageInventory';
 
 
 
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/inventory/:id' element={<Inventory></Inventory>}></Route>
+        <Route path='/manageInventory' element={<ManageInventory></ManageInventory>}></Route>
 
       </Routes>
      

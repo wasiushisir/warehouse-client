@@ -50,5 +50,35 @@
         "supplier name":"Aslam",
         "Quantity":"3"
         
+    },
+    { 
+       
+        "name":"Table Fan",
+        "img":"https://i.ibb.co/1rjgxzn/dslr-1.jpg",
+        "Short description":"My shipment is very well packaged and provided with free packaging. The quality is so amazing that it is almost a highly recommended seller on the spot and will order again.",
+        "price ":"$234",
+        "supplier name":"Aslam",
+        "Quantity":"3"
+        
+    },
+    { 
+       
+        "name":"Table Fan",
+        "img":"https://i.ibb.co/Wg7vYnc/blender-1.jpg",
+        "Short description":"My shipment is very well packaged and provided with free packaging. The quality is so amazing that it is almost a highly recommended seller on the spot and will order again.",
+        "price ":"$234",
+        "supplier name":"Aslam",
+        "Quantity":"3"
+        
+    },
+    { 
+       
+        "name":"Table Fan",
+        "img":"https://i.ibb.co/1Jy1WBc/laptop-1.jpg",
+        "Short description":"My shipment is very well packaged and provided with free packaging. The quality is so amazing that it is almost a highly recommended seller on the spot and will order again.",
+        "price ":"$234",
+        "supplier name":"Aslam",
+        "Quantity":"3"
+        
     }
 ]
