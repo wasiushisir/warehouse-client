@@ -59,7 +59,7 @@ const Home = () => {
 
                 </div>
 
-                <Link to='/manageInventory'><button className=' mx-auto d-block btn btn-lg btn-primary mt-5'>Manage Inventory</button></Link>
+                <Link to='/menageInventory'><button className=' mx-auto d-block btn btn-lg btn-primary mt-5'>Manage Inventory</button></Link>
 
 
 
