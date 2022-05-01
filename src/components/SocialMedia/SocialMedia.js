@@ -12,7 +12,7 @@ const SocialMedia = () => {
     const [signInWithGoogle, user,  error] = useSignInWithGoogle(auth);
     if(user)
     {
-        navigate('/home')
+        navigate(from, { replace: true });
 
     }
     return (
