@@ -58,7 +58,7 @@ const Inventory = () => {
         const img = item.img;
         // console.log(count);
         let Quantity = item.Quantity;
-        Quantity=Quantity+count;
+        Quantity=parseInt(Quantity+count);
         const updateQuantity={Quantity,name,img};
 
          //send data to the server
