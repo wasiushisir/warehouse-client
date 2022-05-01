@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import img from '../../image/login (2).jpg'
 import SocialMedia from '../SocialMedia/SocialMedia';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
@@ -10,6 +10,10 @@ const Login = () => {
     const emailRef=useRef();
     const passRef=useRef();
     const navigate=useNavigate();
+    const location = useLocation();
+
+
+    const from = location.state?.from?.pathname || "/";
 
 
 
@@ -33,7 +37,7 @@ const Login = () => {
       }
 
       if(user){
-          navigate('/home');
+        navigate(from, { replace: true });
       }
 
     

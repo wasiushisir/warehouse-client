@@ -10,6 +10,7 @@ import Logout from './components/Logout/Logout';
 
 import MenageInventory from './components/MenageInventory/MenageInventory';
 import Registration from './components/Registration/Registration';
+import RequireAuth from './components/RequireAuth/RequireAuth';
 
 
 
@@ -20,7 +21,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home'element={<Home></Home>}></Route>
-        <Route path='/inventory/:id' element={<Inventory></Inventory>}></Route>
+        <Route path='/inventory/:id' element={<RequireAuth><Inventory></Inventory></RequireAuth>}></Route>
         
         <Route path='/menageInventory' element={<MenageInventory></MenageInventory>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
