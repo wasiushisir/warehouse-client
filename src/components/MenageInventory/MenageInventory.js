@@ -1,12 +1,18 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const MenageInventory = () => {
-    const nameRef = useRef();
-    const desRef = useRef();
-    const priceRef = useRef();
-    const quantityRef = useRef();
-    const supplyRef = useRef();
-    const imgRef = useRef();
+    // const nameRef = useRef();
+    // const desRef = useRef();
+    // const priceRef = useRef();
+    // const quantityRef = useRef();
+    // const supplyRef = useRef();
+    // const imgRef = useRef();
+    const navigate=useNavigate();
+
+    const gotoAddItem=()=>{
+        navigate('/addItem');
+    }
 
 
 
@@ -43,39 +49,39 @@ const MenageInventory = () => {
 
 
 
-    const handleAddItem=(event)=>{
-        event.preventDefault();
-        const name=nameRef.current.value;
-        const price=priceRef.current.value;
-        const Quantity=quantityRef.current.value;
-        const suppliername=supplyRef.current.value;
-        const description=desRef.current.value;
-        const img=imgRef.current.value;
-        // console.log(name,price,Quantity,suppliername,description);
-        const item={name,price,Quantity,suppliername,description,img}
+    // const handleAddItem=(event)=>{
+    //     event.preventDefault();
+    //     const name=nameRef.current.value;
+    //     const price=priceRef.current.value;
+    //     const Quantity=quantityRef.current.value;
+    //     const suppliername=supplyRef.current.value;
+    //     const description=desRef.current.value;
+    //     const img=imgRef.current.value;
+    //     // console.log(name,price,Quantity,suppliername,description);
+    //     const item={name,price,Quantity,suppliername,description,img}
 
-        //post item
-        const url=`http://localhost:5000/items`;
-        fetch(url,{
-            method:'POST',
-            headers:{
-                'Content-Type': 'application/json',
+    //     //post item
+    //     const url=`http://localhost:5000/items`;
+    //     fetch(url,{
+    //         method:'POST',
+    //         headers:{
+    //             'Content-Type': 'application/json',
 
-            },
-            body:JSON.stringify(item)
-
-
-        })
-        .then(response=>response.json())
-        .then(data=>{
-            console.log('success',data);
-            alert('item added successfully')
-            event.target.reset();
-
-        })
+    //         },
+    //         body:JSON.stringify(item)
 
 
-    }
+    //     })
+    //     .then(response=>response.json())
+    //     .then(data=>{
+    //         console.log('success',data);
+    //         alert('item added successfully')
+    //         event.target.reset();
+
+    //     })
+
+
+    // }
 
     return (
 
@@ -84,7 +90,7 @@ const MenageInventory = () => {
         <div className='row mt-5'>
             <h1 className='text-center text-primary fs-1 fw-bold mb-5'>Manage Inventory</h1>
 
-            <div className='col-lg-6 col-sm-12'>
+            <div className='col-lg-7 col-sm-12'>
 
                 <div className="row">
                     {
@@ -118,9 +124,10 @@ const MenageInventory = () => {
 
             </div>
 
-            <div className='col-lg-4 col-sm-12 mx-auto'>
-                <h2 className='text-center text-primary'>Add Item</h2>
-                <form onSubmit={handleAddItem}>
+            <div className='col-lg-3 col-sm-12 mx-auto'>
+                {/* <h2 className='text-center text-primary'>Add Item</h2> */}
+                <button onClick={gotoAddItem} className='btn btn-primary btn-lg'>Add new Item</button>
+                {/* <form onSubmit={handleAddItem}>
                     <div class="mb-3">
                         <label for="exampleInputName" class="form-label">Name</label>
                         <input ref={nameRef} type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp" />
@@ -161,7 +168,7 @@ const MenageInventory = () => {
 
 
                     <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                </form> */}
 
 
 
