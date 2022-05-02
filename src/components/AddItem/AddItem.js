@@ -18,13 +18,14 @@ const AddItem = () => {
     const handleAddItem=(event)=>{
         event.preventDefault();
         const name=nameRef.current.value;
+        const email=user?.email;
         const price=priceRef.current.value;
         const Quantity=quantityRef.current.value;
         const suppliername=supplyRef.current.value;
         const description=desRef.current.value;
         const img=imgRef.current.value;
         // console.log(name,price,Quantity,suppliername,description);
-        const item={name,price,Quantity,suppliername,description,img}
+        const item={name,email,price,Quantity,suppliername,description,img}
 
         //post item
         const url=`http://localhost:5000/items`;
@@ -59,6 +60,17 @@ const AddItem = () => {
                         <input ref={nameRef} type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp" />
                         <div id="emailHelp" class="form-text"></div>
                     </div>
+
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail" class="form-label">Email Address</label>
+                        <input  type="text" class="form-control" id="exampleInputEmail" value={user?.email} aria-describedby="emailHelp" required readOnly disabled />
+                        <div id="emailHelp" class="form-text"></div>
+                    </div>
+
+
+
+
 
 
                     <div class="form-floating">
