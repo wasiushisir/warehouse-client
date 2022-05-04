@@ -18,14 +18,33 @@ const MenageInventory = () => {
 
 
 
-    const [items, setItems] = useState([]);
+    const [itms, setItms] = useState([]);
     useEffect(() => {
         fetch(`http://localhost:5000/items`)
             .then(response => response.json())
-            .then(data => setItems(data))
+            .then(data => setItms(data))
     }, [])
+
+
+
+    const [addItems,setAddItems]=useState([])
+    useEffect(()=>{
+        fetch('http://localhost:5000/additems')
+        .then(response=>response.json())
+        .then(data=>setAddItems(data))
+    },[])
+
+
+
+
+
+
+
+
+
+
     const handleDelete = (id) => {
-        const url = `http://localhost:5000/items/${id}`;
+        const url = `http://localhost:5000/additems/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
@@ -33,8 +52,8 @@ const MenageInventory = () => {
             .then(data => {
                 if (data.deletedCount) {
                     console.log('deleted successsfully');
-                    const remaining = items.filter(item => item._id !== id)
-                    setItems(remaining)
+                    const remaining = addItems.filter(item => item._id !== id)
+                    setAddItems(remaining)
 
 
                 }
@@ -94,7 +113,7 @@ const MenageInventory = () => {
 
                 <div className="row">
                     {
-                        items.map(item => <div class="card col-12 col-lg-4 ms-5 mt-4  rounded-top-left  rounded-bottom-right img-container" style={{ width: '20rem', background: "#F8F8FF" }}>
+                        addItems.map(item => <div class="card col-12 col-lg-4 ms-5 mt-4  rounded-top-left  rounded-bottom-right img-container" style={{ width: '20rem', background: "#F8F8FF" }}>
                             <img style={{ width: '12rem' }} src={item.img} class="card-img-top" alt="..." />
                             <div className='card-body ms-5'>
                                
@@ -105,7 +124,7 @@ const MenageInventory = () => {
                                 <p className='mb-0'><b>Quantity</b>:{item.Quantity}</p>
 
                                 
-                                <button onClick={() => handleDelete(item._id)} className='btn btn-primary mt-4'>Delete</button>
+                                 <button onClick={() => handleDelete(item._id)} className='btn btn-primary mt-4'>Delete</button> 
 
 
                             </div>

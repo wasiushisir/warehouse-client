@@ -10,6 +10,7 @@ import Login from './components/Login/Login';
 import Logout from './components/Logout/Logout';
 
 import MenageInventory from './components/MenageInventory/MenageInventory';
+import MyItem from './components/MyItem/MyItem';
 import Registration from './components/Registration/Registration';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 
@@ -29,6 +30,7 @@ function App() {
         <Route path='/logout' element={<Logout></Logout>}></Route>
         <Route path='/registration'element={<Registration></Registration>}></Route>
         <Route path='/addItem' element={<RequireAuth><AddItem></AddItem></RequireAuth>}></Route>
+        <Route path='/myItem' element={<MyItem></MyItem>}></Route>
       
 
       </Routes>

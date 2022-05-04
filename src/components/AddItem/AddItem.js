@@ -42,10 +42,60 @@ const AddItem = () => {
         .then(response=>response.json())
         .then(data=>{
             console.log('success',data);
+            // alert('item added successfully')
+            event.target.reset();
+
+        })
+
+
+
+        const url2=`http://localhost:5000/additems`;
+        fetch(url2,{
+            method:'POST',
+            headers:{
+                'Content-Type': 'application/json',
+
+            },
+            body:JSON.stringify(item)
+
+
+        })
+        .then(response=>response.json())
+        .then(data=>{
+            console.log('success',data);
             alert('item added successfully')
             event.target.reset();
 
         })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }
