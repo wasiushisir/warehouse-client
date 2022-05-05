@@ -5,6 +5,7 @@ import SocialMedia from '../SocialMedia/SocialMedia';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { useNavigate } from 'react-router';
+import axios from 'axios';
 
 const Login = () => {
     const emailRef=useRef();
@@ -26,18 +27,21 @@ const Login = () => {
       ] = useSignInWithEmailAndPassword(auth);
 
 
-      const handleLogin=(event)=>{
+      const handleLogin=async(event)=>{
           event.preventDefault();
           const email=emailRef.current.value;
           const password=passRef.current.value;
           console.log(email,password);
-          signInWithEmailAndPassword(email, password)
+          await signInWithEmailAndPassword(email, password)
+          const {data}=await axios.post('http://localhost:5000/login',{email});
+         localStorage.setItem('accessToken',data);
+           navigate(from, { replace: true });
 
 
       }
 
       if(user){
-        navigate(from, { replace: true });
+        // navigate(from, { replace: true });
       }
 
     

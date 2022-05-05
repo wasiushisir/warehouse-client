@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     const [items,setItems]=useState([]);
     useEffect(()=>{
-        fetch(`http://localhost:5000/items`)
+        fetch(`http://localhost:5000/additems`)
         .then(response=>response.json())
         .then(data=>setItems(data))
     },[])

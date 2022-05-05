@@ -7,7 +7,7 @@ const Inventory = () => {
  const { id } = useParams();
     const [item, setItem] = useState({})
     useEffect(() => {
-        fetch(`http://localhost:5000/items/${id}`)
+        fetch(`http://localhost:5000/additems/${id}`)
             .then(response => response.json())
             .then(data => setItem(data))
 
@@ -23,7 +23,7 @@ const Inventory = () => {
         const updateQuantity = { Quantity, name, img };
 
         //send data to the server
-        const url = `http://localhost:5000/items/${id}`;
+        const url = `http://localhost:5000/additems/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
@@ -62,7 +62,7 @@ const Inventory = () => {
         const updateQuantity={Quantity,name,img};
 
          //send data to the server
-         const url = `http://localhost:5000/items/${id}`;
+         const url = `http://localhost:5000/additems/${id}`;
          fetch(url, {
              method: 'PUT',
              headers: { 'Content-Type': 'application/json' },
