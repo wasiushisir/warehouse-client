@@ -3,6 +3,7 @@ import './Home.css';
 import img from '../../image/warhouse.jpg'
 import Item from '../Item/Item';
 import { Link } from 'react-router-dom';
+import About from '../About/About';
 
 
 const Home = () => {
@@ -60,6 +61,10 @@ const Home = () => {
                 </div>
 
                 <Link to='/menageInventory'><button className=' mx-auto d-block btn btn-lg btn-primary mt-5'>Manage Inventory</button></Link>
+                <div className='mt-5'>
+                    <About></About>
+
+                </div>
 
 
 

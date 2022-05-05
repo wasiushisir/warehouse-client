@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router';
 import './App.css';
 import About from './components/About/About';
 import AddItem from './components/AddItem/AddItem';
+import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Inventory from './components/Inventory/Inventory';
@@ -34,6 +35,7 @@ function App() {
       
 
       </Routes>
+      <Footer></Footer>
      
       
       
