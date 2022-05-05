@@ -4,9 +4,16 @@ import img from '../../image/warhouse.jpg'
 import Item from '../Item/Item';
 import { Link } from 'react-router-dom';
 import About from '../About/About';
+import Feedback from '../Feedback/Feedback';
 
 
 const Home = () => {
+    const [feedbacks, setFeedback] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/feedback')
+            .then(response => response.json())
+            .then(data => setFeedback(data))
+    }, [])
     const [items,setItems]=useState([]);
     useEffect(()=>{
         fetch(`http://localhost:5000/additems`)
@@ -63,6 +70,29 @@ const Home = () => {
                 <Link to='/menageInventory'><button className=' mx-auto d-block btn btn-lg btn-primary mt-5'>Manage Inventory</button></Link>
                 <div className='mt-5'>
                     <About></About>
+
+                </div>
+                <div>
+                <h1 className='text-primary text-center mb-4 mt-4'>Feedback</h1>
+                
+
+                <div className='row'>
+
+
+
+{
+     feedbacks.map(feedback => <Feedback key={feedback.id} feedback={feedback}></Feedback>)
+
+}
+
+
+
+
+
+
+</div>
+               
+
 
                 </div>
 

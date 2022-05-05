@@ -13,6 +13,7 @@ import Logout from './components/Logout/Logout';
 
 import MenageInventory from './components/MenageInventory/MenageInventory';
 import MyItem from './components/MyItem/MyItem';
+import NotFound from './components/NotFound/NotFound';
 import Registration from './components/Registration/Registration';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 
@@ -34,6 +35,7 @@ function App() {
         <Route path='/addItem' element={<RequireAuth><AddItem></AddItem></RequireAuth>}></Route>
         <Route path='/myItem' element={<MyItem></MyItem>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       
 
       </Routes>
