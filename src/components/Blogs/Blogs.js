@@ -12,22 +12,21 @@ const Blogs = () => {
                 Javascript:1)Javascript run only the browser.2)It is basically used on the client-side.
                 3)Javascript can add HTML and working with dom manupulation
 
-                Authorization:1)We can run Javascript beyond the browser with the assist of NodeJS..
+                Node js:1)We can run Javascript beyond the browser with the assist of NodeJS..
                 2)It is mostly used on the server-side.
                 3)Node js can not add HTML tags
                 </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="1">
-                <Accordion.Header>Why are you using firebase? What other options do you have to implement authentication?</Accordion.Header>
+                <Accordion.Header>Differences between sql and nosql databases.?</Accordion.Header>
                 <Accordion.Body>
-                   I use firebase because  for its simplcity easy to understand and few code and very much useful for authentication.So Many software industry using firebase for authentication.
-                   Cloud Messaging for Cross-Platform Apps.Optimized App Performance.
-                   other option of using authentication
-                   1)Mongodb
-                   2)occaeca
-                   3)Auth0
-                   4)Passport
-                   5)Keycloack
+                    Sql) 1.Relational database management system.2)Folloes ACID property.
+                    3)Vertically Scalable
+                    NoSql)1.Non Relational database management system
+                    2)Follows CAP.
+                    3)Horizontally scalable
+
+                   
                 </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="2">
