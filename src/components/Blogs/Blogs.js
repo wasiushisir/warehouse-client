@@ -30,14 +30,11 @@ const Blogs = () => {
                 </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="2">
-                <Accordion.Header>What other services does firebase provide other than authentication?</Accordion.Header>
+                <Accordion.Header>What is the purpose of jwt and how does it work?</Accordion.Header>
                 <Accordion.Body>
-                    1)Cloud Firestore
-                    2)Cloud Storage
-                    3)Hosting
-                    4)Prediction
-                    5)Dynamic Links
-                    6)Realtime Database Hooks
+                    JWT or JSON Web Token is used to share sequrity information between two parties client and server.Each JWT can encoded json objects
+                    JWT also used in cryptographic algorithm,the claims cannot be altered after the token is issued.
+                   
                 </Accordion.Body>
             </Accordion.Item>
         </Accordion>
