@@ -32,22 +32,29 @@ const MyItem = () => {
 
 
         const handleDelete = (id) => {
-            const url = `http://localhost:5000/items/${id}`;
-            fetch(url, {
-                method: 'DELETE'
-            })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.deletedCount) {
-                        console.log('deleted successsfully');
-                        const remaining = items.filter(item => item._id !== id)
-                        setItems(remaining)
-    
-    
-                    }
-    
-    
+
+            const proceed=window.confirm('are you sure you wanna delete')
+            if(proceed)
+            {
+                const url = `http://localhost:5000/items/${id}`;
+                fetch(url, {
+                    method: 'DELETE'
                 })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.deletedCount) {
+                            console.log('deleted successsfully');
+                            const remaining = items.filter(item => item._id !== id)
+                            setItems(remaining)
+        
+        
+                        }
+        
+        
+                    })
+
+            }
+           
     
     
     

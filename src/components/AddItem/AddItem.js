@@ -102,12 +102,12 @@ const AddItem = () => {
 
     return (
         <div>
-            <h2>add item</h2>
+            <h1 className='text-center text-primary mt-4'>Add Item</h1>
             <div className='w-50 mx-auto'>
             <form onSubmit={handleAddItem}>
                     <div class="mb-3">
                         <label for="exampleInputName" class="form-label">Name</label>
-                        <input ref={nameRef} type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp" />
+                        <input ref={nameRef} type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp" required/>
                         <div id="emailHelp" class="form-text"></div>
                     </div>
 
@@ -124,7 +124,7 @@ const AddItem = () => {
 
 
                     <div class="form-floating">
-                        <textarea ref={desRef} class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style={{ height: '100px' }}></textarea>
+                        <textarea ref={desRef} class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style={{ height: '100px' }}required></textarea>
                         <label for="floatingTextarea2">Short Description</label>
                     </div>
 
@@ -134,28 +134,28 @@ const AddItem = () => {
 
                     <div class="mb-3">
                         <label for="exampleInputName" class="form-label">Price</label>
-                        <input ref={priceRef} type="number" class="form-control" id="exampleInputPrice" aria-describedby="emailHelp" />
+                        <input ref={priceRef} type="number" class="form-control" id="exampleInputPrice" aria-describedby="emailHelp"required />
                         <div id="emailHelp" class="form-text"></div>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputName" class="form-label">Supplier Name</label>
-                        <input ref={supplyRef} type="text" class="form-control" id="exampleInputSupply" aria-describedby="emailHelp" />
+                        <input ref={supplyRef} type="text" class="form-control" id="exampleInputSupply" aria-describedby="emailHelp"required />
                         <div id="emailHelp" class="form-text"></div>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputName" class="form-label">Quantity</label>
-                        <input ref={quantityRef} type="number" class="form-control" id="exampleInputQuantity" aria-describedby="emailHelp" />
+                        <input ref={quantityRef} type="number" class="form-control" id="exampleInputQuantity" aria-describedby="emailHelp"required />
                         <div id="emailHelp" class="form-text"></div>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputName" class="form-label">Image</label>
-                        <input ref={imgRef} type="text" class="form-control" id="exampleInputImage" aria-describedby="emailHelp" />
+                        <input ref={imgRef} type="text" class="form-control" id="exampleInputImage" aria-describedby="emailHelp" required/>
                         <div id="emailHelp" class="form-text"></div>
                     </div>
 
 
 
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary mb-4">Submit</button>
                 </form>
 
 

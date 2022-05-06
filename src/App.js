@@ -28,12 +28,12 @@ function App() {
         <Route path='/home'element={<Home></Home>}></Route>
         <Route path='/inventory/:id' element={<RequireAuth><Inventory></Inventory></RequireAuth>}></Route>
         
-        <Route path='/menageInventory' element={<MenageInventory></MenageInventory>}></Route>
+        <Route path='/menageInventory' element={<RequireAuth><MenageInventory></MenageInventory></RequireAuth>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/logout' element={<Logout></Logout>}></Route>
         <Route path='/registration'element={<Registration></Registration>}></Route>
         <Route path='/addItem' element={<RequireAuth><AddItem></AddItem></RequireAuth>}></Route>
-        <Route path='/myItem' element={<MyItem></MyItem>}></Route>
+        <Route path='/myItem' element={<RequireAuth><MyItem></MyItem></RequireAuth>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       

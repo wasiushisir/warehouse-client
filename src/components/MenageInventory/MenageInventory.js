@@ -44,7 +44,11 @@ const MenageInventory = () => {
 
 
     const handleDelete = (id) => {
-        const url = `http://localhost:5000/additems/${id}`;
+
+        const proceeed=window.confirm('are you sure you wanna delete')
+        if(proceeed)
+        {
+            const url = `http://localhost:5000/additems/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
@@ -60,6 +64,9 @@ const MenageInventory = () => {
 
 
             })
+
+        }
+        
 
 
 

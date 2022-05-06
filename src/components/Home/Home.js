@@ -33,7 +33,7 @@ const Home = () => {
                             </div>
                             
 
-                            <p className='mt-5'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta at incidunt numquam aperiam totam quibusdam praesentium quas quae, in quia exercitationem. Expedita nam quod vel amet sequi, nostrum laborum saepe! </p>
+                            <p className='mt-5'>Stock or stock inventory is the collection of all the materials and goods stored, whether for use to complete the production process or for sale to the customer </p>
 
                             <button  className='btn btn-primary d-block w-50 mx-auto mt-5'>Get started</button>
                         
@@ -68,15 +68,15 @@ const Home = () => {
                 </div>
 
                 <Link to='/menageInventory'><button className=' mx-auto d-block btn btn-lg btn-primary mt-5'>Manage Inventory</button></Link>
-                <div className='mt-5'>
+                <div id='about' className='mt-5'>
                     <About></About>
 
                 </div>
-                <div>
+                <div id='feedback'>
                 <h1 className='text-primary text-center mb-4 mt-4'>Feedback</h1>
                 
 
-                <div className='row'>
+                <div className='row mx-auto border'>
 
 
 

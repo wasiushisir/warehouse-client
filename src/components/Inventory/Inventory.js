@@ -18,9 +18,13 @@ const Inventory = () => {
     const handleDelivered = (id) => {
         let Quantity = item.Quantity;
         const name = item.name;
+        const description=item.description;
+        const suppliername=item.suppliername;
+        const price=item.price;
+
         const img = item.img;
         Quantity = Quantity -1;
-        const updateQuantity = { Quantity, name, img };
+        const updateQuantity = { Quantity, name, img,description,suppliername,price };
 
         //send data to the server
         const url = `http://localhost:5000/additems/${id}`;
@@ -56,10 +60,13 @@ const Inventory = () => {
         const count=parseInt(countRef.current.value)
         const name = item.name;
         const img = item.img;
+        const description=item.description;
+        const suppliername=item.suppliername;
+        const price=item.price;
         // console.log(count);
         let Quantity = item.Quantity;
         Quantity=parseInt(Quantity+count);
-        const updateQuantity={Quantity,name,img};
+        const updateQuantity={Quantity,name,img,description,suppliername,price};
 
          //send data to the server
          const url = `http://localhost:5000/additems/${id}`;
@@ -102,28 +109,32 @@ const Inventory = () => {
     return (
 
         <div style={{background:'#ffc9b8'}} >
-            <h2>this is inventory:{id}</h2>
+            <h2 className='text-center'>this is inventory:{id}</h2>
 
             <div className='d-flex justify-content-between'>
                  <div className='row'> 
 
-                <div className='col-sm-12 col-lg-6'>
+                <div className='col-sm-12 col-lg-6 mt-5'>
+                    <div className='ps-4'>
                    
                     <img style={{width:'75%'}} src={photo} alt="" />
+                    </div>
 
                 </div>
 
            
         
 
-            <div className='d-flex align-items-center justify-content-evenly col-sm-12 col-lg-6 '>
+            <div className='d-flex align-items-center justify-content-evenly col-sm-12 col-lg-6 mb-5 mt-5 '>
                 <div class="card mx-5" style={{ width: '20rem',background:'#F5F5F5' }}>
                     <img style={{ width: '14rem' }} src={item.img} class="card-img-top mx-auto mt-3" alt="..." />
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <h5>Name: {item.name}</h5>
                         <h5>Quantity: {item.Quantity}</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h5>Price: {item.price}</h5>
+                        <h5>SupplierName: {item.suppliername}</h5>
+                        <p class="card-text">Description:{item.description}</p>
                         <button className='btn btn-primary' onClick={() => handleDelivered(id)}>Delivered</button>
 
                     </div>
