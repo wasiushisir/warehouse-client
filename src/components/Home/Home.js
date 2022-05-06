@@ -5,9 +5,12 @@ import Item from '../Item/Item';
 import { Link } from 'react-router-dom';
 import About from '../About/About';
 import Feedback from '../Feedback/Feedback';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 
 const Home = () => {
+    const [user, loading, error] = useAuthState(auth);
     const [feedbacks, setFeedback] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/feedback')
@@ -20,6 +23,15 @@ const Home = () => {
         .then(response=>response.json())
         .then(data=>setItems(data))
     },[])
+
+    if(loading)
+    {
+        return <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    }
+
+
     return (
         <div>
             <div className='pt-4 mt-4 mb-4'>
@@ -76,7 +88,7 @@ const Home = () => {
                 <h1 className='text-primary text-center mb-4 mt-4'>Feedback</h1>
                 
 
-                <div className='row mx-auto border'>
+                <div className='row mx-auto '>
 
 
 

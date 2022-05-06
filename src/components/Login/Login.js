@@ -10,7 +10,9 @@ import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 const Login = () => {
+    
     const emailRef=useRef();
     const passRef=useRef();
     const navigate=useNavigate();
@@ -53,6 +55,14 @@ const Login = () => {
         const email = emailRef.current.value;
         await sendPasswordResetEmail(email);
         toast('Sent email');
+
+    }
+
+    if(loading)
+    {
+        return <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
 
     }
 
