@@ -28,7 +28,7 @@ const AddItem = () => {
         const item={name,email,price,Quantity,suppliername,description,img}
 
         //post item
-        const url=`http://localhost:5000/items`;
+        const url=`https://limitless-caverns-11500.herokuapp.com/items`;
         fetch(url,{
             method:'POST',
             headers:{
@@ -49,7 +49,7 @@ const AddItem = () => {
 
 
 
-        const url2=`http://localhost:5000/additems`;
+        const url2=`https://limitless-caverns-11500.herokuapp.com/additems`;
         fetch(url2,{
             method:'POST',
             headers:{

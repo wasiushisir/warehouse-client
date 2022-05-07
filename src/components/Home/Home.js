@@ -13,13 +13,13 @@ const Home = () => {
     const [user, loading, error] = useAuthState(auth);
     const [feedbacks, setFeedback] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/feedback')
+        fetch('https://limitless-caverns-11500.herokuapp.com/feedback')
             .then(response => response.json())
             .then(data => setFeedback(data))
     }, [])
     const [items,setItems]=useState([]);
     useEffect(()=>{
-        fetch(`http://localhost:5000/additems`)
+        fetch(`https://limitless-caverns-11500.herokuapp.com/additems`)
         .then(response=>response.json())
         .then(data=>setItems(data))
     },[])

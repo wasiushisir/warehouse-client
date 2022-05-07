@@ -8,7 +8,7 @@ const MyItem = () => {
     const [items, setItems] = useState([]);
     useEffect(() => {
         const email=user?.email;
-        const url=`http://localhost:5000/items?email=${email}`;
+        const url=`https://limitless-caverns-11500.herokuapp.com/items?email=${email}`;
         fetch(url,{
             headers:{
                 authorization:`Bearer ${localStorage.getItem('accessToken')}`
@@ -36,7 +36,7 @@ const MyItem = () => {
             const proceed=window.confirm('are you sure you wanna delete')
             if(proceed)
             {
-                const url = `http://localhost:5000/items/${id}`;
+                const url = `https://limitless-caverns-11500.herokuapp.com/items/${id}`;
                 fetch(url, {
                     method: 'DELETE'
                 })

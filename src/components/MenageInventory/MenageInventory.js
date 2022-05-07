@@ -20,7 +20,7 @@ const MenageInventory = () => {
 
     const [itms, setItms] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/items`)
+        fetch(`https://limitless-caverns-11500.herokuapp.com/items`)
             .then(response => response.json())
             .then(data => setItms(data))
     }, [])
@@ -29,7 +29,7 @@ const MenageInventory = () => {
 
     const [addItems,setAddItems]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/additems')
+        fetch('https://limitless-caverns-11500.herokuapp.com/additems')
         .then(response=>response.json())
         .then(data=>setAddItems(data))
     },[])
@@ -48,7 +48,7 @@ const MenageInventory = () => {
         const proceeed=window.confirm('are you sure you wanna delete')
         if(proceeed)
         {
-            const url = `http://localhost:5000/additems/${id}`;
+            const url = `https://limitless-caverns-11500.herokuapp.com/additems/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

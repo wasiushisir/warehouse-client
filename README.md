@@ -1,6 +1,13 @@
-# Getting Started with Create React App
+# FR Telecom & Inventory Warehouse
+#This website is kind of warehouse inventory.where carious kinds of electronic Products are stored in warehouse and delevered time to time,Particular user can add and delete this product
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- There is is total 6 section in home page including navbar,banner,item,about,feedback,footer
+- 6 items are shown in the home page and rest of the items are shown in the manage item route
+- items quantity can update and deleted
+- login and registration system is available here
+- particular user can added item in their account and also delete
+
+This project was bootstrapped with https://fr-telecom-bcd17.web.app/
 
 ## Available Scripts
 
