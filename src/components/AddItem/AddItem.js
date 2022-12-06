@@ -28,7 +28,7 @@ const AddItem = () => {
         const item={name,email,price,Quantity,suppliername,description,img}
 
         //post item
-        const url=`https://limitless-caverns-11500.herokuapp.com/items`;
+        const url=`https://ware-server.onrender.com/items`;
         fetch(url,{
             method:'POST',
             headers:{
@@ -49,7 +49,7 @@ const AddItem = () => {
 
 
 
-        const url2=`https://limitless-caverns-11500.herokuapp.com/additems`;
+        const url2=`https://ware-server.onrender.com/additems`;
         fetch(url2,{
             method:'POST',
             headers:{

@@ -7,7 +7,7 @@ const Inventory = () => {
  const { id } = useParams();
     const [item, setItem] = useState({})
     useEffect(() => {
-        fetch(`https://limitless-caverns-11500.herokuapp.com/additems/${id}`)
+        fetch(`https://ware-server.onrender.com/additems/${id}`)
             .then(response => response.json())
             .then(data => setItem(data))
 
@@ -27,7 +27,7 @@ const Inventory = () => {
         const updateQuantity = { Quantity, name, img,description,suppliername,price };
 
         //send data to the server
-        const url = `https://limitless-caverns-11500.herokuapp.com/additems/${id}`;
+        const url = `https://ware-server.onrender.com/additems/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
@@ -69,7 +69,7 @@ const Inventory = () => {
         const updateQuantity={Quantity,name,img,description,suppliername,price};
 
          //send data to the server
-         const url = `https://limitless-caverns-11500.herokuapp.com/additems/${id}`;
+         const url = `https://ware-server.onrender.com/additems/${id}`;
          fetch(url, {
              method: 'PUT',
              headers: { 'Content-Type': 'application/json' },
