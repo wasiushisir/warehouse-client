@@ -10,3 +10,10 @@
     top: 0;
     width: 100vw;
 }
+
+@media (min-width: 3000px) and (max-width:600px) {
+
+  .footer{
+      text-align: center;
+  }
+}

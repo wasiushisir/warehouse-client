@@ -17,7 +17,7 @@ const Item = ({item}) => {
 
     
     return (
-        <div class="card col-12 col-lg-4 ms-5 mt-4  rounded-top-left  rounded-bottom-right img-container" style={{ width: '20rem',background:"#F8F8FF" }}>
+        <div class="card col-12 col-lg-3 ms-3  mt-4  rounded-top-left  rounded-bottom-right img-container" style={{ width: '20rem',background:"#F8F8FF" }}>
         <img  style={{ width: '12rem' }} src={img} class="card-img-top" alt="..." />
         <div class="card-body ms-5">
         <p className='mb-0'><b>Name:</b>{name}</p>

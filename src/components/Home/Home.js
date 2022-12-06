@@ -33,13 +33,14 @@ const Home = () => {
 
 
     return (
-        <div>
-            <div className='pt-4 mt-4 mb-4'>
-                <div className="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-sm-12">
+       <div className='container-fluid'>
+            <div className='container-fluid'>
+            <div className='pt-4 mt-4 mb-4 '>
+                <div className='container-fluid'>
+                    <div class="row ">
+                        <div class="col-lg-6 col-12 ">
 
-                            <div className='text-banner'>
+                            <div className='text-banner '>
                             <h1>Everything You need to grow</h1>
                             <h1><span className='text-primary'>Your business</span></h1>
                             </div>
@@ -50,7 +51,7 @@ const Home = () => {
                             <button  className='btn btn-primary d-block w-50 mx-auto mt-5'>Get started</button>
                         
                         </div>
-                        <div class=" col-lg-6 col-sm-12 img-banner">
+                        <div class=" col-lg-6 col-12 img-banner">
                            <img src={img} alt="" />
                         </div>
                         </div>
@@ -63,7 +64,7 @@ const Home = () => {
                 </div>
                 <div className='item-container mt-5'>
                     <h1 className='text-primary text-center'>Our Items</h1>
-                    <div className='row'>
+                    <div className='row container-fluid'>
                         
                             
 
@@ -88,7 +89,7 @@ const Home = () => {
                 <h1 className='text-primary text-center mb-4 mt-4'>Feedback</h1>
                 
 
-                <div className='row mx-auto '>
+                <div className='row container-fluid'>
 
 
 
@@ -111,6 +112,8 @@ const Home = () => {
 
 
             </div>
+
+       </div>
             );
 };
 

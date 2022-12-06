@@ -6,11 +6,11 @@ import auth from '../../firebase.init';
 import './Header.css'
 
 const Header = () => {
-  const [user, loading, error] = useAuthState(auth);
+  const [user, loading, ] = useAuthState(auth);
  
   
     return (
-        <div>
+        <div className=''>
             <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark" sticky="top">
   <Container>
   <Navbar.Brand as ={Link} to="/">Fr Telecom & Inventory Warehouse</Navbar.Brand>
